@@ -4,6 +4,65 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+:root {
+    --bg-color: #FCF9E8;
+    --text-color: #1B2325;
+    --header-bg: #8D3F35;
+    --header-text: #C69A5F;
+    --link-color: #F0AE59;
+    --link-hover-bg: #8D3F35;
+    --link-hover-text: #FFF;
+    --link-border-bottom: rgba(252, 249, 232, 0.7);
+    --border-color: #999;
+    --shadow-color: #1B2325;
+    --post-title-color: #A4211D;
+    --tag-bg: #FCF9E8;
+    --tag-color: #1B2325;
+    --tag-hover-bg: #8D3F35;
+    --tag-hover-color: #FCF9E8;
+    --footer-bg: #1B2325;
+    --footer-text: #FCF9E8;
+    --time-dot-bg: #A4211D;
+    --time-dot-center: #FCF9E8;
+    --time-dot-center-hover: #ECAFAF;
+    --selection-bg: #2B383C;
+    --selection-text: #FCF9E8;
+    --nav-toggle-bg: #8D3F35;
+    --nav-toggle-border: #1B2325;
+    --nav-toggle-icon: #C69A5F;
+    --nav-hover-shadow: white;
+}
+
+body.dark-mode {
+    --bg-color: #1B2325;
+    --text-color: #FCF9E8;
+    --header-bg: #2B383C; /* Darker header */
+    --header-text: #C69A5F;
+    --link-color: #F0AE59;
+    --link-hover-bg: #444;
+    --link-hover-text: #FFF;
+    --link-border-bottom: rgba(27, 35, 37, 0.7);
+    --border-color: #555;
+    --shadow-color: #000;
+    --post-title-color: #ECAFAF; /* Lighter red/pink for dark mode */
+    --tag-bg: #2B383C;
+    --tag-color: #FCF9E8;
+    --tag-hover-bg: #F0AE59;
+    --tag-hover-color: #1B2325;
+    --footer-bg: #0e1213;
+    --footer-text: #FCF9E8;
+    --time-dot-bg: #ECAFAF;
+    --time-dot-center: #1B2325;
+    --time-dot-center-hover: #A4211D;
+    --selection-bg: #F0AE59;
+    --selection-text: #1B2325;
+    --nav-toggle-bg: #2B383C;
+    --nav-toggle-border: #555;
+    --nav-toggle-icon: #F0AE59;
+    --nav-hover-shadow: #1B2325;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -18,8 +77,8 @@ body, html {
 
 body {
     font: 1.2rem/2rem 'Open Sans', 'Microsoft Yahei', "DejaVu Sans", sans-serif;
-    background: #FCF9E8;
-    color: 1B2325;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
@@ -28,7 +87,7 @@ body {
 }
 
 header {
-    background: #8D3F35;
+    background: var(--header-bg);
     position: fixed;
     z-index: 10;
     top: 0;
@@ -36,7 +95,7 @@ header {
     font-family: 'McLaren', cursive;
     min-height: 60px;
     /*border-bottom: 1px solid rgba(140, 140, 140, 0.6);*/
-    box-shadow: inset 0px -4px 7px -4px #1B2325;
+    box-shadow: inset 0px -4px 7px -4px var(--shadow-color);
 }
 
 .header-padding {
@@ -90,9 +149,9 @@ header nav {
     padding: 9px 10px;
     margin: 10px 22px;
     flex: none;
-    background: #8D3F35;
-    border: 1px solid #1B2325;
-    box-shadow: 0px 0px 3px -1px #1B2325;
+    background: var(--nav-toggle-bg);
+    border: 1px solid var(--nav-toggle-border);
+    box-shadow: 0px 0px 3px -1px var(--nav-toggle-border);
     border-radius: 3px;
     cursor: pointer;
     outline: 0;
@@ -105,7 +164,7 @@ header nav {
 }
 
 .brand .navbar-toggle:active {
-    box-shadow: inset 0px 0px 2px #1B2325;
+    box-shadow: inset 0px 0px 2px var(--nav-toggle-border);
 }
 
 .navbar-toggle .icon-bar {
@@ -113,7 +172,7 @@ header nav {
     display: block;
     height: 2px;
     width: 22px;
-    background: #C69A5F;
+    background: var(--nav-toggle-icon);
 }
 
 .navbar-toggle .icon-bar + .icon-bar {
@@ -146,14 +205,14 @@ header nav ul > li > a {
     text-decoration: none;
     padding: 5px 5px;
     margin: 0px 8px;
-    border-bottom: 3px solid rgba(252, 249, 232, 0.7);
+    border-bottom: 3px solid var(--link-border-bottom);
     transition: all 0.5s ease;
 }
 
 header nav ul > li > a:hover {
-    box-shadow: inset 0px -16px 12px -12px white;
-    background: rgba(141, 63, 53);
-    color: #FFF;
+    box-shadow: inset 0px -16px 12px -12px var(--nav-hover-shadow);
+    background: var(--link-hover-bg);
+    color: var(--link-hover-text);
 }
 
 /* main content */
@@ -204,9 +263,9 @@ header nav ul > li > a:hover {
 
 /* footer */
 footer {
-    border-top: 1px solid #999;
-    background: #1B2325;
-    color: #FCF9E8;
+    border-top: 1px solid var(--border-color);
+    background: var(--footer-bg);
+    color: var(--footer-text);
     padding: 40px 0;
 }
 
@@ -219,11 +278,11 @@ footer .copyright a,
 footer .copyright a:focus {
     outline: none;
     text-decoration: none;
-    color: #f0ae59;
+    color: var(--link-color);
 }
 
 footer .copyright a:hover {
-    border-bottom: 2px solid #8D3F35;
+    border-bottom: 2px solid var(--header-bg);
 }
 
 /* time line */
@@ -236,7 +295,7 @@ footer .copyright a:hover {
     position: absolute;
     height: 100%;
     width: 6px;
-    background: #1B2325;
+    background: var(--shadow-color);
     margin-left: 8rem;
     opacity: 0.75;
 }
@@ -253,7 +312,7 @@ footer .copyright a:hover {
     height: 20px;
     left: calc(8rem - 10px + 3px);
     top: calc(0.4rem);
-    background: #A4211D;
+    background: var(--time-dot-bg);
     border-radius: 100%;
 }
 
@@ -264,14 +323,14 @@ footer .copyright a:hover {
     height: 16px;
     left: calc(8rem - 8px + 3px);
     top: calc(0.4rem + 2px);
-    background: #FCF9E8;
+    background: var(--time-dot-center);
     border-radius: 100%;
 }
 /* tagline */
 .tagline,
 .post-header {
-    background: #1B2325;
-    color: #FCF9E8;
+    background: var(--footer-bg); /* Use footer bg for tagline too as it was #1B2325 */
+    color: var(--footer-text);
     padding: 13vh 0;
     font-size: 3em;
     line-height: 1em;
@@ -317,7 +376,11 @@ footer .copyright a:hover {
     display: inline-block;
     position: relative;
     top: 7px;
+    /* Invert filter for dark mode? Or maybe just keep it. It's an image. */
+}
 
+body.dark-mode .post-entry .post-tags::before {
+    filter: invert(1);
 }
 
 .post-entry .post-tags .tag a {
@@ -333,13 +396,13 @@ footer .social .social-entry {
 
 footer .social .social-entry a {
     padding: 10px;
-    color: #FCF9E8;
+    color: var(--footer-text);
 }
 
 footer .social .social-entry a:hover {
     padding: 5px 10px;
-    background: #FCF9E8;
-    color: #1B2325;
+    background: var(--footer-text);
+    color: var(--footer-bg);
 }
 
 /* header font */
@@ -348,34 +411,34 @@ h1,h2,h3,h4,h5,h6 {
 
 /* font color and other colors */
 ::selection {
-    background: #2B383C;
-    color: #FCF9E8;
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 ::-moz-selection {
-    background: #2B383C;
-    color: #FCF9E8;
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 
 .navbar .container .brand a,
 .navbar .container nav a {
-    color: #F0AE59;
-    text-shadow: 1px 1px 1px #444;
+    color: var(--link-color);
+    text-shadow: 1px 1px 1px #444; /* Keep shadow or make variable? */
 }
 
 .post-entry .post-desc .post-title a {
-    color: #A4211D;
+    color: var(--post-title-color);
 }
 
 .post-entry .post-tags .tag a,
 .post-entry .num-of-comments a {
-    color: #1B2325;
-    background: #FCF9E8;
+    color: var(--tag-color);
+    background: var(--tag-bg);
 }
 
 .post-entry .post-tags .tag a:hover,
 .post-entry .num-of-comments a:hover {
-    color: #FCF9E8;
-    background: #8D3F35;
+    color: var(--tag-hover-color);
+    background: var(--tag-hover-bg);
 }
 
 .post-entry .num-of-comments a {
@@ -384,21 +447,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .post-entry .post-tags .tag a {
-    box-shadow: 1px 1px 1px #1B2325;
+    box-shadow: 1px 1px 1px var(--shadow-color);
 }
 
 #index-main .post-entry:hover .post-time::after {
-    background: #ECAFAF;
+    background: var(--time-dot-center-hover);
 }
 
 #index-main .post-entry:hover .post-time{
     box-sizing: content-box;
-    border-bottom: 2px solid #A4211D;
+    border-bottom: 2px solid var(--post-title-color);
 }
 
 #index-main .post-entry .post-desc .post-title a:hover {
     background: #242F32;
-    color: #F0AE59;
+    color: var(--link-color);
     text-shadow: 1px 1px 1px #242F32;
 }
 
@@ -481,7 +544,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     header nav ul > li:hover {
-	background: #FCF9E8;
+	background: var(--bg-color);
     }
 
     header nav ul > li a,

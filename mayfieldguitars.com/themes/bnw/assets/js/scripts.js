@@ -13,3 +13,27 @@ $(function() {
 var myElement = document.querySelector("header");
 var headroom  = new Headroom(myElement);
 headroom.init();
+
+// Dark Mode Toggle
+$(document).ready(function() {
+    var toggle = $('#dark-mode-toggle');
+    var body = $('body');
+
+    // Update button text on load based on class
+    if (body.hasClass('dark-mode')) {
+        toggle.text('Light Mode');
+    }
+
+    toggle.click(function(e) {
+        e.preventDefault();
+        body.toggleClass('dark-mode');
+
+        if (body.hasClass('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            toggle.text('Light Mode');
+        } else {
+            localStorage.setItem('theme', 'light');
+            toggle.text('Dark Mode');
+        }
+    });
+});
