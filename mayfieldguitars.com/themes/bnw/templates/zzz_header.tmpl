@@ -2,7 +2,15 @@
 <%namespace name="base" file="base_helper.tmpl" import="*"/>
 
 <%def name="html_header()">
-
+    <script>
+    (function() {
+        var savedMode = localStorage.getItem('theme');
+        var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedMode === 'dark' || (!savedMode && systemPrefersDark)) {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
     <header id="header" class="navbar">
         <div class="container">
             ${html_site_title()}
@@ -66,6 +74,7 @@
     %endfor
     ${template_hooks['menu']()}
     ${template_hooks['menu_alt']()}
+    <li><a href="#" id="dark-mode-toggle">Dark Mode</a></li>
     </ul>
     </nav>
 </%def>
