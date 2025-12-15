@@ -23,6 +23,12 @@ lang="${lang}">
     <meta name="viewport" content="width=device-width">
     <title>${title|striphtml} | ${blog_title|striphtml}</title>
 
+    <!-- Bolt ⚡: Preconnect to font domains for faster initial connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bolt ⚡: Load fonts via <link> instead of @import to prevent blocking -->
+    <link href="https://fonts.googleapis.com/css?family=McLaren|Love+Ya+Like+A+Sister|Roboto+Slab|Open+Sans" rel="stylesheet">
+
     ${html_stylesheets()}
     ${html_feedlinks()}
     %if permalink:
