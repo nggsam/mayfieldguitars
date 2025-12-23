@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  nav.collapse {
+    display: block !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav.collapse.in {
+    max-height: 100vh;
+    transition: max-height 0.3s ease-in;
+  }
+}
