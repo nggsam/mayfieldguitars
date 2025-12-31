@@ -1,8 +1,4 @@
-/* Fonts Loading */
-@import url(https://fonts.googleapis.com/css?family=McLaren);
-@import url(https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* Fonts Loading - Moved to HTML <link> for performance */
 /* Font Mixins */
 * {
   box-sizing: border-box;
@@ -16,7 +12,7 @@ html {
 }
 body {
   font: 1.2rem/2rem 'Open Sans', 'Microsoft Yahei', "DejaVu Sans", sans-serif;
-  background: #fcf7f7;
+  background: #FCF7F7;
   color: #304860;
   display: flex;
   flex-direction: column;
@@ -31,7 +27,7 @@ body .main {
 }
 /* header */
 header {
-  background: #6b5364;
+  background: #6B5364;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -63,10 +59,10 @@ header nav ul > li > a {
   border-bottom: 3px solid rgba(252, 247, 247, 0.7);
   transition: all 0.3s ease;
   text-shadow: 1px 1px 1px #416182;
-  color: #ece1de;
+  color: #ECE1DE;
 }
 header nav ul > li > a:hover {
-  background: #fcf7f7;
+  background: #FCF7F7;
   text-shadow: none;
   color: #304860;
 }
@@ -84,7 +80,7 @@ header .brand .logo {
 }
 header .brand a,
 header .brand a:focus {
-  color: #ece1de;
+  color: #ECE1DE;
   text-shadow: 1px 1px 1px #416182;
   text-decoration: none;
   outline: 0;
@@ -100,7 +96,7 @@ header .brand .navbar-toggle {
   padding: 9px 10px;
   margin: 10px 22px;
   flex: none;
-  background: #6b5364;
+  background: #6B5364;
   border: 1px solid #304860;
   box-shadow: 0px 0px 3px -1px #527ba4;
   border-radius: 3px;
@@ -170,7 +166,7 @@ header .brand .navbar-toggle .icon-bar + .icon-bar {
 .post-entry .post-desc .post-title a:hover {
   padding: 2px 0px;
   background: #304860;
-  color: #ece1de;
+  color: #ECE1DE;
   text-shadow: 1px 1px 1px #304860;
 }
 .post-entry .post-desc .post-tags {
@@ -187,13 +183,13 @@ header .brand .navbar-toggle .icon-bar + .icon-bar {
   padding: 0px 8px;
   position: relative;
   color: #304860;
-  background: #fcf7f7;
+  background: #FCF7F7;
   box-shadow: 1px 1px 1px #304860;
   font-size: 0.9em;
 }
 .post-entry .post-desc .post-tags .tag a:hover {
-  color: #fcf7f7;
-  background: #6b5364;
+  color: #FCF7F7;
+  background: #6B5364;
 }
 .post-entry .post-desc .num-of-comments {
   flex: none;
@@ -202,11 +198,11 @@ header .brand .navbar-toggle .icon-bar + .icon-bar {
   padding: 1px 3px;
   font-size: 0.8em;
   color: #304860;
-  background: #fcf7f7;
+  background: #FCF7F7;
 }
 .post-entry .post-desc .num-of-comments a:hover {
-  color: #fcf7f7;
-  background: #6b5364;
+  color: #FCF7F7;
+  background: #6B5364;
 }
 .post-entry .post-desc .post-description {
   flex: none;
@@ -216,7 +212,7 @@ header .brand .navbar-toggle .icon-bar + .icon-bar {
 /* footer */
 footer {
   background: #304860;
-  color: #fcf7f7;
+  color: #FCF7F7;
   padding: 40px 0;
 }
 footer .container {
@@ -227,10 +223,10 @@ footer .copyright a,
 footer .copyright a:focus {
   outline: none;
   text-decoration: none;
-  color: #ece1de;
+  color: #ECE1DE;
 }
 footer .copyright a:hover {
-  border-bottom: 2px solid #6b5364;
+  border-bottom: 2px solid #6B5364;
 }
 /* time line */
 #index-main {
@@ -269,7 +265,7 @@ footer .copyright a:hover {
   height: 16px;
   left: calc(8rem - 8px + 3px);
   top: calc(0.4rem + 2px);
-  background: #fcf7f7;
+  background: #FCF7F7;
   border-radius: 100%;
 }
 #index-main .post-entry:hover .post-time {
@@ -289,7 +285,7 @@ footer .copyright a:hover {
 .meta-header,
 .post-header {
   background: #304860;
-  color: #fcf7f7;
+  color: #FCF7F7;
   padding: 10vh 0;
   font-size: 3em;
   line-height: 1em;
@@ -313,21 +309,21 @@ footer .social .social-entry {
 }
 footer .social .social-entry a {
   padding: 10px;
-  color: #fcf7f7;
+  color: #FCF7F7;
 }
 footer .social .social-entry a:hover {
   padding: 5px 10px;
-  background: #fcf7f7;
+  background: #FCF7F7;
   color: #304860;
 }
 /* font color and other colors */
 ::selection {
   background: #527ba4;
-  color: #fcf7f7;
+  color: #FCF7F7;
 }
 ::-moz-selection {
   background: #527ba4;
-  color: #fcf7f7;
+  color: #FCF7F7;
 }
 /* post */
 .post-header {
@@ -335,27 +331,27 @@ footer .social .social-entry a:hover {
 }
 .post-meta {
   background: #304860;
-  color: #fcf7f7;
+  color: #FCF7F7;
 }
 .meta {
   display: flex;
   justify-content: space-around;
-  border-top: 1px dashed #ece1de;
+  border-top: 1px dashed #ECE1DE;
   padding: 2px 0px;
   font-size: 1rem;
 }
 .meta a {
-  color: #fcf7f7;
+  color: #FCF7F7;
   background: #304860;
   padding: 2px 4px;
 }
 .meta a:hover {
   color: #304860;
-  background: #fcf7f7;
+  background: #FCF7F7;
 }
 .meta .authordate {
   font-family: monospace;
-  color: #ece1de;
+  color: #ECE1DE;
 }
 .meta .post-tags {
   flex: none;
@@ -394,7 +390,7 @@ footer .social .social-entry a:hover {
 }
 #post-main a:hover,
 #category-tag a:hover {
-  color: #fcf7f7;
+  color: #FCF7F7;
   background-color: #304860;
 }
 /* code related, put it in top level, so that it can be overwritten */
@@ -451,11 +447,11 @@ blockquote {
 }
 .postlist a {
   color: #304860;
-  background: #fcf7f7;
+  background: #FCF7F7;
   padding: 2px 4px;
 }
 .postlist a:hover {
-  color: #fcf7f7;
+  color: #FCF7F7;
   background: #304860;
 }
 .postlist li time {
@@ -525,7 +521,7 @@ blockquote {
     display: block;
   }
   header nav ul > li a:hover {
-    background: #fcf7f7;
+    background: #FCF7F7;
   }
   header .brand .navbar-toggle {
     display: block;
