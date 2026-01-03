@@ -92,15 +92,14 @@ lang="${lang}">
 <%def name="late_load_js()">
     %if use_bundles:
         %if use_cdn:
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            ## jQuery removed as dependency
         %else:
             <script src="/assets/js/all-nocdn.js" type="text/javascript"></script>
         %endif
     %else:
         %if use_cdn:
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            ## jQuery removed as dependency
         %else:
-            <script src="/assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
             <script src="/assets/js/headroom.min.js" type="text/javascript"></script>
             <script src="/assets/js/scripts.js" type="text/javascript"></script>
         %endif
