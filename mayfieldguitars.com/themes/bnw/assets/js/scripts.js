@@ -1,15 +1,19 @@
-/* add click event for navbar-toggle item */
-$(function() {
-  $('#btn-toggle-nav').click(function() {
-    var item = $('nav.navbar-collapse');
-    item.slideToggle(500, function() {
-      item[0].style.removeProperty('display');
-      item.toggleClass('in');
-    });
-  });
-});
+// Refactored to Vanilla JS
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleBtn = document.getElementById('btn-toggle-nav');
+  var navbar = document.querySelector('nav.collapse');
 
-// headroom
-var myElement = document.querySelector("header");
-var headroom  = new Headroom(myElement);
-headroom.init();
+  if (toggleBtn && navbar) {
+    toggleBtn.addEventListener('click', function() {
+      // Toggle the 'in' class which controls the max-height via CSS
+      navbar.classList.toggle('in');
+    });
+  }
+
+  // headroom
+  var header = document.querySelector("header");
+  if (header && typeof Headroom !== 'undefined') {
+    var headroom = new Headroom(header);
+    headroom.init();
+  }
+});
