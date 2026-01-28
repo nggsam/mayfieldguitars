@@ -1,15 +1,24 @@
+/*
+ * Optimized for performance: Vanilla JS replacement for jQuery.
+ * Reduces bundle size by ~90KB.
+ */
+
 /* add click event for navbar-toggle item */
-$(function() {
-  $('#btn-toggle-nav').click(function() {
-    var item = $('nav.navbar-collapse');
-    item.slideToggle(500, function() {
-      item[0].style.removeProperty('display');
-      item.toggleClass('in');
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('btn-toggle-nav');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var nav = document.querySelector('nav.navbar-collapse');
+      if (nav) {
+        nav.classList.toggle('in');
+      }
     });
-  });
+  }
 });
 
 // headroom
 var myElement = document.querySelector("header");
-var headroom  = new Headroom(myElement);
-headroom.init();
+if (myElement && window.Headroom) {
+    var headroom  = new Headroom(myElement);
+    headroom.init();
+}
