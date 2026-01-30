@@ -1,8 +1,8 @@
 /* Fonts Loading */
-@import url(~'https://fonts.googleapis.com/css?family=McLaren');
-@import url(~'https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
-@import url(~'https://fonts.googleapis.com/css?family=Roboto+Slab');
-@import url(~'https://fonts.googleapis.com/css?family=Open+Sans');
+@import (css) url('https://fonts.googleapis.com/css?family=McLaren');
+@import (css) url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+@import (css) url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import (css) url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 // color theme
 // primary-color: for background
@@ -609,11 +609,16 @@ blockquote {
 
     /* collapsed navigation */
     nav.collapse {
-	display: none;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        visibility: hidden;
     }
 
     .collapse.in {
-	display: block;
+        max-height: 100vh;
+        visibility: visible;
     }
 
     header {
