@@ -1,0 +1,22 @@
+/* Custom CSS for Mayfield Guitars */
+
+/* Transition for mobile navigation */
+@media (max-width: 767px) {
+    /* Override default display: none to allow transitions */
+    nav.collapse {
+        display: block !important;
+        max-height: 0;
+        overflow: hidden;
+        /* Transition max-height and visibility for smooth effect */
+        transition: max-height 0.5s ease-out, visibility 0.5s;
+        visibility: hidden;
+        opacity: 0; /* Fade in/out for extra smoothness */
+        transition: max-height 0.5s ease-out, visibility 0.5s, opacity 0.5s;
+    }
+
+    nav.collapse.in {
+        max-height: 100vh; /* Allow enough space for the menu */
+        visibility: visible;
+        opacity: 1;
+    }
+}
