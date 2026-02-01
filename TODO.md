@@ -23,3 +23,8 @@
 - [ ] Review `conf.py` settings.
 - [ ] Add description to `conf.py`.
 - [ ] Check if `HIDDEN_TAGS` need to be updated.
+
+## Performance Improvements (Bolt)
+- [ ] Remove jQuery dependency and refactor `scripts.js` to Vanilla JS.
+- [ ] Optimize mobile navigation with CSS transitions.
+- [ ] Enable GZIP compression for generated assets.
