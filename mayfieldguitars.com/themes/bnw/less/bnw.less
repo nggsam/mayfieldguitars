@@ -609,11 +609,16 @@ blockquote {
 
     /* collapsed navigation */
     nav.collapse {
-	display: none;
+        display: block;
+        max-height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, visibility 0.3s ease-out;
     }
 
     .collapse.in {
-	display: block;
+        max-height: 500px;
+        visibility: visible;
     }
 
     header {
