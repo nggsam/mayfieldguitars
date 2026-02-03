@@ -493,10 +493,16 @@ blockquote {
   }
   /* collapsed navigation */
   nav.collapse {
-    display: none;
+    display: block;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, visibility 0.5s;
   }
   .collapse.in {
     display: block;
+    max-height: 500px;
+    visibility: visible;
   }
   header > .container {
     align-items: flex-start;
