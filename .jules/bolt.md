@@ -1,0 +1,3 @@
+## 2025-02-06 - [Legacy Asset Cleanup & CSS Specificity]
+**Learning:** The project state had drifted from "memory" regarding jQuery removal. It was still present in bundles and templates. Also, `bnw-generated.css` defines mobile navigation styles inside a media query that are hard to override without `!important` or exact specificity matching in `custom.css`.
+**Action:** When working on "cleanup" tasks, verify file presence (`ls`, `grep`) instead of relying solely on documentation or memory. For CSS overrides in this theme, use `custom.css` with matching media queries and be prepared to use `!important` for display properties controlled by the generated theme.
